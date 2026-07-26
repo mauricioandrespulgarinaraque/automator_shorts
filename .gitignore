@@ -1,0 +1,19 @@
+# Entornos virtuales
+env_ia/
+venv/
+ENV/
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de entorno y credenciales
+.env
+
+# Archivos multimedia generados o temporales
+outputs/
+temp/
+*.mp4
+*.mp3
