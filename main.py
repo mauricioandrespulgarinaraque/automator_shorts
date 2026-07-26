@@ -17,7 +17,7 @@ class MainPipeline:
 
     def ejecutar(self):
         print("==================================================")
-        print("🤖 PIPELINE MODULAR DE SHORTS (AUTOMATOR_SHORTS)")
+        print("PIPELINE MODULAR DE SHORTS (AUTOMATOR_SHORTS)")
         print("==================================================")
 
         datos = self.script_gen.generar()
@@ -35,7 +35,7 @@ class MainPipeline:
             escenas.append(clip)
 
         ruta_final = os.path.join(OUTPUT_DIR, "short_modular_ia.mp4")
-        print(f"\n🎬 Uniendo escenas y renderizando video final hacia HDD...")
+        print(f"\n Uniendo escenas y renderizando video final hacia HDD...")
         video_final = concatenate_videoclips(escenas, method="compose")
         video_final.write_videofile(ruta_final, fps=FPS, codec='libx264', audio_codec='aac', threads=6)
 
@@ -43,8 +43,8 @@ class MainPipeline:
         shutil.rmtree(TEMP_DIR)
         os.makedirs(TEMP_DIR, exist_ok=True)
 
-        print(f"\n✅ ¡PROCESO MODULAR FINALIZADO EXITOSAMENTE!")
-        print(f"📂 Archivo de video disponible en:\n👉 {ruta_final}\n")
+        print(f"\n ¡PROCESO MODULAR FINALIZADO EXITOSAMENTE!")
+        print(f" Archivo de video disponible en:\n {ruta_final}\n")
 
 if __name__ == "__main__":
     pipeline = MainPipeline(tema="Monetización Automática Modular con Python")
