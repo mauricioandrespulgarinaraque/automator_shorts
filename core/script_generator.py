@@ -3,7 +3,7 @@ class ScriptGenerator:
         self.tema = tema
 
     def generar(self):
-        print(f"🧠 Generando guion modular para el tema: '{self.tema}'...")
+        print(f"Generando guion modular para el tema: '{self.tema}'...")
         return {
             "tema": self.tema,
             "escenas": [
