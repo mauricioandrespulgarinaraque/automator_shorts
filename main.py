@@ -39,7 +39,7 @@ class MainPipeline:
         video_final = concatenate_videoclips(escenas, method="compose")
         video_final.write_videofile(ruta_final, fps=FPS, codec='libx264', audio_codec='aac', threads=6)
 
-        print("\n🧹 Limpiando archivos temporales locales del NVMe...")
+        print("\n Limpiando archivos temporales locales del NVMe...")
         shutil.rmtree(TEMP_DIR)
         os.makedirs(TEMP_DIR, exist_ok=True)
 
